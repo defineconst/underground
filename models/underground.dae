@@ -1,0 +1,988 @@
+<?xml version="1.0"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Someone</author>
+      <authoring_tool>Assimp Collada Exporter</authoring_tool>
+    </contributor>
+    <created>2000-01-01T23:59:59</created>
+    <modified>2000-01-01T23:59:59</modified>
+    <unit name="centimeter" meter="0.01" />
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="m0_IFCDefault_-fx" name="m0_IFCDefault_">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.6   0.6   0.6   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0   0   0   0</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">16</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m1Default_Wall-fx" name="m1Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m2Default_Wall-fx" name="m2Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m3Default_Wall-fx" name="m3Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m4Default_Wall-fx" name="m4Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m5Default_Wall-fx" name="m5Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m6Default_Wall-fx" name="m6Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m7Default_Wall-fx" name="m7Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m8Default_Wall-fx" name="m8Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m9Default_Wall-fx" name="m9Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m10Default_Wall-fx" name="m10Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m11Default_Wall-fx" name="m11Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m12Default_Wall-fx" name="m12Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m13Default_Wall-fx" name="m13Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m14Default_Wall-fx" name="m14Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m15Default_Wall-fx" name="m15Default_Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   0</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0   0   0   0</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.501961   0.501961   0.501961   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25098   0.25098   0.25098   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0   0   0   0</color>
+            </reflective>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="m0_IFCDefault_" name="m0_IFCDefault_">
+      <instance_effect url="#m0_IFCDefault_-fx"/>
+    </material>
+    <material id="m1Default_Wall" name="m1Default_Wall">
+      <instance_effect url="#m1Default_Wall-fx"/>
+    </material>
+    <material id="m2Default_Wall" name="m2Default_Wall">
+      <instance_effect url="#m2Default_Wall-fx"/>
+    </material>
+    <material id="m3Default_Wall" name="m3Default_Wall">
+      <instance_effect url="#m3Default_Wall-fx"/>
+    </material>
+    <material id="m4Default_Wall" name="m4Default_Wall">
+      <instance_effect url="#m4Default_Wall-fx"/>
+    </material>
+    <material id="m5Default_Wall" name="m5Default_Wall">
+      <instance_effect url="#m5Default_Wall-fx"/>
+    </material>
+    <material id="m6Default_Wall" name="m6Default_Wall">
+      <instance_effect url="#m6Default_Wall-fx"/>
+    </material>
+    <material id="m7Default_Wall" name="m7Default_Wall">
+      <instance_effect url="#m7Default_Wall-fx"/>
+    </material>
+    <material id="m8Default_Wall" name="m8Default_Wall">
+      <instance_effect url="#m8Default_Wall-fx"/>
+    </material>
+    <material id="m9Default_Wall" name="m9Default_Wall">
+      <instance_effect url="#m9Default_Wall-fx"/>
+    </material>
+    <material id="m10Default_Wall" name="m10Default_Wall">
+      <instance_effect url="#m10Default_Wall-fx"/>
+    </material>
+    <material id="m11Default_Wall" name="m11Default_Wall">
+      <instance_effect url="#m11Default_Wall-fx"/>
+    </material>
+    <material id="m12Default_Wall" name="m12Default_Wall">
+      <instance_effect url="#m12Default_Wall-fx"/>
+    </material>
+    <material id="m13Default_Wall" name="m13Default_Wall">
+      <instance_effect url="#m13Default_Wall-fx"/>
+    </material>
+    <material id="m14Default_Wall" name="m14Default_Wall">
+      <instance_effect url="#m14Default_Wall-fx"/>
+    </material>
+    <material id="m15Default_Wall" name="m15Default_Wall">
+      <instance_effect url="#m15Default_Wall-fx"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="meshId0" name="meshId0_name" >
+      <mesh>
+        <source id="meshId0-positions" name="meshId0-positions">
+          <float_array id="meshId0-positions-array" count="24"> 5.11591e-13 0.333333 0 5.11591e-13 0.333333 18 242.276 0.333333 18 242.276 0.333333 0 242.276 -0.333333 18 242.276 -0.333333 0 5.11591e-13 -0.333333 18 5.11591e-13 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId0-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId0-vertices">
+          <input semantic="POSITION" source="#meshId0-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId0-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId1" name="meshId1_name" >
+      <mesh>
+        <source id="meshId1-positions" name="meshId1-positions">
+          <float_array id="meshId1-positions-array" count="24"> -1.10327e-08 0.333333 0 -1.10327e-08 0.333333 18 131.333 0.333333 18 131.333 0.333333 0 131.333 -0.333333 18 131.333 -0.333333 0 -1.10327e-08 -0.333333 18 -1.10327e-08 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId1-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId1-vertices">
+          <input semantic="POSITION" source="#meshId1-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId1-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId2" name="meshId2_name" >
+      <mesh>
+        <source id="meshId2-positions" name="meshId2-positions">
+          <float_array id="meshId2-positions-array" count="24"> 5.11591e-13 0.333333 0 5.11591e-13 0.333333 18 242.276 0.333333 18 242.276 0.333333 0 242.276 -0.333333 18 242.276 -0.333333 0 5.11591e-13 -0.333333 18 5.11591e-13 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId2-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId2-vertices">
+          <input semantic="POSITION" source="#meshId2-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId2-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId3" name="meshId3_name" >
+      <mesh>
+        <source id="meshId3-positions" name="meshId3-positions">
+          <float_array id="meshId3-positions-array" count="24"> -1.10327e-08 0.333333 0 -1.10327e-08 0.333333 18 131.333 0.333333 18 131.333 0.333333 0 131.333 -0.333333 18 131.333 -0.333333 0 -1.10327e-08 -0.333333 18 -1.10327e-08 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId3-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId3-vertices">
+          <input semantic="POSITION" source="#meshId3-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId3-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId4" name="meshId4_name" >
+      <mesh>
+        <source id="meshId4-positions" name="meshId4-positions">
+          <float_array id="meshId4-positions-array" count="24"> 7.45058e-09 0.333333 0 7.45058e-09 0.333333 18 57 0.333333 18 57 0.333333 0 57 -0.333333 18 57 -0.333333 0 7.45058e-09 -0.333333 18 7.45058e-09 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId4-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId4-vertices">
+          <input semantic="POSITION" source="#meshId4-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId4-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId5" name="meshId5_name" >
+      <mesh>
+        <source id="meshId5-positions" name="meshId5-positions">
+          <float_array id="meshId5-positions-array" count="24"> -2.25856e-09 0.333333 0 -2.25856e-09 0.333333 18 128.333 0.333333 18 128.333 0.333333 0 128.333 -0.333333 18 128.333 -0.333333 0 -2.25856e-09 -0.333333 18 -2.25856e-09 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId5-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId5-vertices">
+          <input semantic="POSITION" source="#meshId5-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId5-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId6" name="meshId6_name" >
+      <mesh>
+        <source id="meshId6-positions" name="meshId6-positions">
+          <float_array id="meshId6-positions-array" count="24"> -8.77411e-09 0.333333 0 -8.77411e-09 0.333333 18 27 0.333333 18 27 0.333333 0 27 -0.333333 18 27 -0.333333 0 -8.77411e-09 -0.333333 18 -8.77411e-09 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId6-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId6-vertices">
+          <input semantic="POSITION" source="#meshId6-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId6-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId7" name="meshId7_name" >
+      <mesh>
+        <source id="meshId7-positions" name="meshId7-positions">
+          <float_array id="meshId7-positions-array" count="24"> 0 0.333333 0 0 0.333333 18 32 0.333333 18 32 0.333333 0 32 -0.333333 18 32 -0.333333 0 0 -0.333333 18 0 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId7-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId7-vertices">
+          <input semantic="POSITION" source="#meshId7-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId7-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId8" name="meshId8_name" >
+      <mesh>
+        <source id="meshId8-positions" name="meshId8-positions">
+          <float_array id="meshId8-positions-array" count="24"> 0 0.333333 0 0 0.333333 18 26.3333 0.333333 18 26.3333 0.333333 0 26.3333 -0.333333 18 26.3333 -0.333333 0 0 -0.333333 18 0 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId8-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId8-vertices">
+          <input semantic="POSITION" source="#meshId8-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId8-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId9" name="meshId9_name" >
+      <mesh>
+        <source id="meshId9-positions" name="meshId9-positions">
+          <float_array id="meshId9-positions-array" count="24"> -1.10327e-08 0.333333 0 -1.10327e-08 0.333333 18 131.333 0.333333 18 131.333 0.333333 0 131.333 -0.333333 18 131.333 -0.333333 0 -1.10327e-08 -0.333333 18 -1.10327e-08 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId9-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId9-vertices">
+          <input semantic="POSITION" source="#meshId9-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId9-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId10" name="meshId10_name" >
+      <mesh>
+        <source id="meshId10-positions" name="meshId10-positions">
+          <float_array id="meshId10-positions-array" count="24"> 7.45058e-09 0.333333 0 7.45058e-09 0.333333 18 75 0.333333 18 75 0.333333 0 75 -0.333333 18 75 -0.333333 0 7.45058e-09 -0.333333 18 7.45058e-09 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId10-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId10-vertices">
+          <input semantic="POSITION" source="#meshId10-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId10-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId11" name="meshId11_name" >
+      <mesh>
+        <source id="meshId11-positions" name="meshId11-positions">
+          <float_array id="meshId11-positions-array" count="24"> 4.9738e-14 0.333333 0 4.9738e-14 0.333333 18 48.3333 0.333333 18 48.3333 0.333333 0 48.3333 -0.333333 18 48.3333 -0.333333 0 4.9738e-14 -0.333333 18 4.9738e-14 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId11-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId11-vertices">
+          <input semantic="POSITION" source="#meshId11-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId11-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId12" name="meshId12_name" >
+      <mesh>
+        <source id="meshId12-positions" name="meshId12-positions">
+          <float_array id="meshId12-positions-array" count="24"> 0 0.333333 0 0 0.333333 18 74.3333 0.333333 18 74.3333 0.333333 0 74.3333 -0.333333 18 74.3333 -0.333333 0 0 -0.333333 18 0 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId12-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId12-vertices">
+          <input semantic="POSITION" source="#meshId12-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId12-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId13" name="meshId13_name" >
+      <mesh>
+        <source id="meshId13-positions" name="meshId13-positions">
+          <float_array id="meshId13-positions-array" count="24"> -8.77417e-09 0.333333 0 -8.77417e-09 0.333333 18 19.3333 0.333333 18 19.3333 0.333333 0 19.3333 -0.333333 18 19.3333 -0.333333 0 -8.77417e-09 -0.333333 18 -8.77417e-09 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId13-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId13-vertices">
+          <input semantic="POSITION" source="#meshId13-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId13-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="meshId14" name="meshId14_name" >
+      <mesh>
+        <source id="meshId14-positions" name="meshId14-positions">
+          <float_array id="meshId14-positions-array" count="24"> -8.77414e-09 0.333333 0 -8.77414e-09 0.333333 18 19.3333 0.333333 18 19.3333 0.333333 0 19.3333 -0.333333 18 19.3333 -0.333333 0 -8.77414e-09 -0.333333 18 -8.77414e-09 -0.333333 0 </float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#meshId14-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId14-vertices">
+          <input semantic="POSITION" source="#meshId14-positions" />
+        </vertices>
+        <polylist count="6" material="theresonlyone">
+          <input offset="0" semantic="VERTEX" source="#meshId14-vertices" />
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 1 2 3 3 2 4 5 5 4 6 7 7 6 1 0 0 3 5 7 6 4 2 1 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="myScene" name="myScene">
+      <node id="IfcSite_Default" name="IfcSite_Default">
+        <matrix>1 0 0 0 0 -4.37114e-08 1 0 0 -1 -4.37114e-08 0 0 0 0 1</matrix>
+        <node id="$RelAggregates" name="$RelAggregates">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <node id="IfcBuilding_3nPLqBrKf4sui9EByMuuBg" name="IfcBuilding_3nPLqBrKf4sui9EByMuuBg">
+            <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+            <node id="$RelAggregates" name="$RelAggregates">
+              <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+              <node id="IfcBuildingStorey_Level 1" name="IfcBuildingStorey_Level 1">
+                <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":350910" name="IfcWallStandardCase_Basic Wall:Generic - 8":350910">
+                  <matrix>1 0 0 -150.977 0 1 0 79.0862 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId0">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m1Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":351041" name="IfcWallStandardCase_Basic Wall:Generic - 8":351041">
+                  <matrix>0 1 0 90.9658 -1 0 0 78.7529 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId1">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m2Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":351131" name="IfcWallStandardCase_Basic Wall:Generic - 8":351131">
+                  <matrix>-1 0 0 91.2991 0 -1 0 -52.9138 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId2">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m3Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":351206" name="IfcWallStandardCase_Basic Wall:Generic - 8":351206">
+                  <matrix>0 -1 0 -150.644 1 0 0 -52.5805 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId3">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m4Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":351673" name="IfcWallStandardCase_Basic Wall:Generic - 8":351673">
+                  <matrix>0 1 0 -21.6437 -1 0 0 78.7529 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId4">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m5Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":351754" name="IfcWallStandardCase_Basic Wall:Generic - 8":351754">
+                  <matrix>-1 0 0 -21.9771 0 -1 0 22.0862 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId5">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m6Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":351873" name="IfcWallStandardCase_Basic Wall:Generic - 8":351873">
+                  <matrix>0 1 0 11.9658 -1 0 0 78.7529 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId6">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m7Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":351941" name="IfcWallStandardCase_Basic Wall:Generic - 8":351941">
+                  <matrix>1 0 0 12.2991 0 1 0 52.0862 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId7">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m8Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":351982" name="IfcWallStandardCase_Basic Wall:Generic - 8":351982">
+                  <matrix>0 -1 0 43.9658 1 0 0 52.4195 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId8">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m9Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":352318" name="IfcWallStandardCase_Basic Wall:Generic - 8":352318">
+                  <matrix>0 1 0 55.9658 -1 0 0 78.7529 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId9">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m10Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":353673" name="IfcWallStandardCase_Basic Wall:Generic - 8":353673">
+                  <matrix>0 -1 0 6.96581 1 0 0 -52.5805 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId10">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m11Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":353733" name="IfcWallStandardCase_Basic Wall:Generic - 8":353733">
+                  <matrix>1 0 0 7.29914 0 1 0 22.0862 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId11">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m12Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":354322" name="IfcWallStandardCase_Basic Wall:Generic - 8":354322">
+                  <matrix>0 1 0 -130.644 -1 0 0 21.7529 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId12">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m13Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":354719" name="IfcWallStandardCase_Basic Wall:Generic - 8":354719">
+                  <matrix>1 0 0 -150.31 0 1 0 -2.91381 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId13">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m14Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="IfcWallStandardCase_Basic Wall:Generic - 8":354771" name="IfcWallStandardCase_Basic Wall:Generic - 8":354771">
+                  <matrix>1 0 0 -150.31 0 1 0 -27.9138 0 0 1 0 0 0 0 1</matrix>
+                  <instance_geometry url="#meshId14">
+                    <bind_material>
+                      <technique_common>
+                        <instance_material symbol="theresonlyone" target="#m15Default_Wall" />
+                      </technique_common>
+                    </bind_material>
+                  </instance_geometry>
+                </node>
+                <node id="$RelAggregates" name="$RelAggregates">
+                  <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#myScene" />
+  </scene>
+</COLLADA>

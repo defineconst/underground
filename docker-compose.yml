@@ -1,0 +1,16 @@
+version: '2.1'
+
+services:
+
+  underground:
+    build: .
+    image: local/underground
+    container_name: underground
+    hostname: underground
+    environment:
+      ES_URL: ${ES_URL}
+      ES_HTTP_AUTH: ${ES_HTTP_AUTH}
+      ES_INDEX: ${ES_INDEX}
+#    ports:
+#      - 3000:3000
+
