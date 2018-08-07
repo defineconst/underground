@@ -20,9 +20,37 @@
 </head>
 <body>
   <div id="cesiumContainer"></div>
+  <div id="divCredit" style="display: none;"></div>
   <script>
+   var data = {};
+
+   data.state = {
+     "underground"        : { "color" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "reception-west"     : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "reception-east"     : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "outside-west"       : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "outside-north-west" : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "retractable-door"   : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "outside-north"      : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "outside-north-east" : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "dirtywerx-ramp"     : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "dirtywerx-north"    : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "dirtywerx-south"    : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "thunderdrone-east"  : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "thunderdrone-west"  : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "staff-area"         : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 }
+   };
+
     var viewer = new Cesium.Viewer('cesiumContainer', {
-      baseLayerPicker: true,
+      animation : false,
+      creditContainer: "divCredit",
+      homeButton: false,
+      instructionsInitiallyVisible : false,
+      navigationHelpButton: false,
+      infoBox : true,
+      selectionIndicator : true,
+      timeline : false,
+      baseLayerPicker: false,
       imageryProvider: Cesium.createOpenStreetMapImageryProvider({
           url : 'https://stamen-tiles.a.ssl.fastly.net/toner-background/',
           credit : 'Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under CC BY SA.'
@@ -48,10 +76,38 @@
     model.colorBlendAmount = 0.5;
     scene.globe.depthTestAgainstTerrain = true;
     devices["underground"] = scene.primitives.add(model);
-    var heading = Cesium.Math.toRadians(0.0);
-    var pitch = Cesium.Math.toRadians(0.0);
-    var range = 100.0;
+    var heading = Cesium.Math.toRadians(160.0);
+    var pitch = Cesium.Math.toRadians(-45.0);
+    var range = 175.0;
     viewer.camera.lookAt(center, new Cesium.HeadingPitchRange(heading, pitch, range));
+
+    viewer.scene.canvas.setAttribute('tabIndex', 1);
+
+    viewer.screenSpaceEventHandler.setInputAction(function(action) {
+      data.state["outside-north"] = { "color" : "RED",   "flashing" : true , "alpha" : 0.5 };
+      data.state["retractable-door"] = { "color" : "RED", "flashing" : true, "alpha" : 0.5 };
+      var entity = new Cesium.Entity('Weapon Alert!');
+      entity.name = 'Weapon Alert';
+      entity.description = {
+        getValue : function() {
+          return 'Gun Detected';
+        }
+      };
+      viewer.selectedEntity = entity;
+    }, Cesium.ScreenSpaceEventType.LEFT_DOWN);
+
+    viewer.screenSpaceEventHandler.setInputAction(function(action) {
+      data.state["reception-east"] = { "color" : "RED", "flashing" : true, "alpha" : 0.5 };
+      data.state["reception-west"] = { "color" : "RED", "flashing" : true, "alpha" : 0.5 };
+      var entity = new Cesium.Entity('Weapon Alert!');
+      entity.name = 'Weapon Alert';
+      entity.description = {
+        getValue : function() {
+          return 'Gun Detected';
+        }
+      };
+      viewer.selectedEntity = entity;
+    }, Cesium.ScreenSpaceEventType.MIDDLE_DOWN);
 
     // All of the primitive entities we've added to the older model are relative to a lat/long that has shifted slightly
     // in the newer model. Instead of changing all of the relative offsets, just transform the model shift:
@@ -151,6 +207,18 @@
      }
    });
 
+   devices["retractable-door"] = viewer.entities.add({
+     name : 'retractable-door',
+     position: Cesium.Cartesian3.fromDegrees(lat + 0.000115, lon + 0.0002900, 3.0),
+     box : {
+       dimensions : new Cesium.Cartesian3(12.25, 1.25, 6.25),
+       material : Cesium.Color.BLUE.withAlpha(0.5),
+       outline : true,
+       outlineWidth : 8,
+       outlineColor : Cesium.Color.BLACK
+     }
+   });
+
    devices["outside-north-east"] = viewer.entities.add({
      name : 'outside-north-east',
      position: Cesium.Cartesian3.fromDegrees(lat + 0.000220, lon + 0.0002900, 6.0),
@@ -235,68 +303,48 @@
      }
    });
 
-/*
    var colorizeInterval
 
-   // Every 5s, ask the server for the color state for devices
-   var colorizePeriod = 1000
-
-   // Every 100ms, decreates the alpha value a little
-   var animationPeriod = 200
-
-   var configs = {}
+   var colorizePeriod = 500
 
    function colorize() {
-     $.get( "/state", function( data ) {
-       if(data && data.state) {
-         $.each(data.state, function( name, value ) {
-           config = data.state[name]
-           colorname = config["color"]
-           alpha = config["alpha"]
-           startalpha = config["alphaStart"]
-           endalpha = config["alphaEnd"]
-           config["alphaDelta"] = (startalpha - endalpha) / ( colorizePeriod / animationPeriod )
-	   device = devices[name]
-	   if(device) {
-	     configs[name] = config
-             if(device) {
-               if(device.box) {
-                 device.box.material = Cesium.Color[colorname].withAlpha(alpha)
-               } else {
-                 if(device.color) {
-                   device.color = Cesium.Color[colorname].withAlpha(alpha)
-		 } else {
-                   console.log(`Cannot find device.box or device.color for ${name}`)
-		 }
-               }
-             } else {
-               console.log(`Cannot find device state for ${name}`)
-             }
-	   }
-	 })
-       }
-     })
-   }
-
-   function animate() {
-     $.each(configs, function( name, config ) {
-       device = devices[name]
-       oldalpha = config["alpha"]
-       alphaDelta = config["alphaDelta"]
-       newalpha = oldalpha - alphaDelta
-       if(newalpha >= config["alphaEnd"]) {
-         config["alpha"] = newalpha
+     if(data && data.state) {
+       $.each(data.state, function( name, value ) {
+         config = data.state[name]
          colorname = config["color"]
-         console.log(`newalpha ${newalpha} alphaDelta ${alphaDelta}`)
-         device.box.material = Cesium.Color[colorname].withAlpha(newalpha)
-       }
-     })
+         flashing = config["flashing"]
+         if(flashing) {
+           if(config["alpha"] == 0.5) {
+             config["alpha"] = 1.0;
+           } else {
+             config["alpha"] = 0.5;
+           }
+	 } else {
+           config["alpha"] = 0.5;
+	 }
+         alpha = config["alpha"]
+         device = devices[name]
+         if(device) {
+           var color = Cesium.Color[colorname].withAlpha(alpha)
+           if(device.box) {
+             device.box.material = color;
+             console.log("Coloring the model " + name);
+           } else {
+             if(device.color) {
+               device.color = color
+               console.log("Coloring the device " + name);
+             } else {
+               console.log(`Cannot find device.box or device.color for ${name}`)
+             }
+           }
+         } else {
+           console.log(`Cannot find device state for ${name}`)
+         }
+       })
+     }
    }
 
    colorizeInterval = setInterval(colorize, colorizePeriod)
-*/
-
-/*   animationInterval = setInterval(animate, animationPeriod) */
 
   </script>
 </body>
