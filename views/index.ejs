@@ -84,9 +84,10 @@
 
     viewer.scene.canvas.setAttribute('tabIndex', 1);
 
+    // Act1 trigger
     viewer.screenSpaceEventHandler.setInputAction(function(action) {
       data.state["outside-west"] = { "color" : "RED",   "flashing" : true , "alpha" : 0.5 };
-      var entity = new Cesium.Entity('Weapon Alert!');
+      var entity = new Cesium.Entity('External Weapon Alert');
       entity.name = 'Alert';
       entity.description = {
         getValue : function() {
@@ -96,7 +97,7 @@
       viewer.selectedEntity = entity;
       setTimeout(function(){
         data.state["retractable-door"] = { "color" : "GREEN", "flashing" : true, "alpha" : 0.5 };
-        var entity = new Cesium.Entity('Weapon Alert!');
+        var entity = new Cesium.Entity('External Action');
         entity.name = 'Action';
         entity.description = {
           getValue : function() {
@@ -107,10 +108,17 @@
       }, 2000);
     }, Cesium.ScreenSpaceEventType.LEFT_DOWN);
 
+    // Act1 reset
+    /* viewer.screenSpaceEventHandler.setInputAction(function(action) {
+      data.state["outside-west"] = { "color" : "GREEN",   "flashing" : false , "alpha" : 0.5 };
+      data.state["retractable-door"] = { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 };
+    }, Cesium.ScreenSpaceEventType.LEFT_UP);*/
+
+    // Act2 trigger
     viewer.screenSpaceEventHandler.setInputAction(function(action) {
       data.state["reception-east"] = { "color" : "RED", "flashing" : true, "alpha" : 0.5 };
       data.state["reception-west"] = { "color" : "RED", "flashing" : true, "alpha" : 0.5 };
-      var entity = new Cesium.Entity('Weapon Alert!');
+      var entity = new Cesium.Entity('Lobby Weapon Alert');
       entity.name = 'Alert';
       entity.description = {
         getValue : function() {
@@ -120,7 +128,7 @@
       viewer.selectedEntity = entity;
       setTimeout(function(){
         data.state["nonlethal"] = { "color" : "GREEN", "flashing" : true, "alpha" : 0.5 };
-        var entity = new Cesium.Entity('Weapon Alert!');
+        var entity = new Cesium.Entity('Nonlethal Action');
         entity.name = 'Action';
         entity.description = {
           getValue : function() {
@@ -130,6 +138,13 @@
         viewer.selectedEntity = entity;
       }, 2000);
     }, Cesium.ScreenSpaceEventType.MIDDLE_DOWN);
+
+    // Act2 reset
+    /* viewer.screenSpaceEventHandler.setInputAction(function(action) {
+      data.state["reception-east"] = { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 };
+      data.state["reception-west"] = { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 };
+      data.state["nonlethal"] = { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 };
+    }, Cesium.ScreenSpaceEventType.MIDDLE_UP); */
 
     // All of the primitive entities we've added to the older model are relative to a lat/long that has shifted slightly
     // in the newer model. Instead of changing all of the relative offsets, just transform the model shift:
