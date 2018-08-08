@@ -27,6 +27,7 @@
    data.state = {
      "underground"        : { "color" : "BLACK", "flashing" : false, "alpha" : 0.5 },
      "reception-west"     : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
+     "nonlethal"          : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
      "reception-east"     : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
      "outside-west"       : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
      "outside-north-west" : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
@@ -84,29 +85,50 @@
     viewer.scene.canvas.setAttribute('tabIndex', 1);
 
     viewer.screenSpaceEventHandler.setInputAction(function(action) {
-      data.state["outside-north"] = { "color" : "RED",   "flashing" : true , "alpha" : 0.5 };
-      data.state["retractable-door"] = { "color" : "RED", "flashing" : true, "alpha" : 0.5 };
+      data.state["outside-west"] = { "color" : "RED",   "flashing" : true , "alpha" : 0.5 };
       var entity = new Cesium.Entity('Weapon Alert!');
-      entity.name = 'Weapon Alert';
+      entity.name = 'Alert';
       entity.description = {
         getValue : function() {
-          return 'Gun Detected';
+          return '2 x Weapon Detected';
         }
       };
       viewer.selectedEntity = entity;
+      setTimeout(function(){
+        data.state["retractable-door"] = { "color" : "GREEN", "flashing" : true, "alpha" : 0.5 };
+        var entity = new Cesium.Entity('Weapon Alert!');
+        entity.name = 'Action';
+        entity.description = {
+          getValue : function() {
+            return 'Building Lockdown';
+          }
+        };
+        viewer.selectedEntity = entity;
+      }, 2000);
     }, Cesium.ScreenSpaceEventType.LEFT_DOWN);
 
     viewer.screenSpaceEventHandler.setInputAction(function(action) {
       data.state["reception-east"] = { "color" : "RED", "flashing" : true, "alpha" : 0.5 };
       data.state["reception-west"] = { "color" : "RED", "flashing" : true, "alpha" : 0.5 };
       var entity = new Cesium.Entity('Weapon Alert!');
-      entity.name = 'Weapon Alert';
+      entity.name = 'Alert';
       entity.description = {
         getValue : function() {
-          return 'Gun Detected';
+          return '1 x Weapon Detected';
         }
       };
       viewer.selectedEntity = entity;
+      setTimeout(function(){
+        data.state["nonlethal"] = { "color" : "GREEN", "flashing" : true, "alpha" : 0.5 };
+        var entity = new Cesium.Entity('Weapon Alert!');
+        entity.name = 'Action';
+        entity.description = {
+          getValue : function() {
+            return 'Non-lethal Response';
+          }
+        };
+        viewer.selectedEntity = entity;
+      }, 2000);
     }, Cesium.ScreenSpaceEventType.MIDDLE_DOWN);
 
     // All of the primitive entities we've added to the older model are relative to a lat/long that has shifted slightly
@@ -158,6 +180,18 @@
         outlineColor : Cesium.Color.BLACK
       }
     })
+
+    devices["nonlethal"] = viewer.entities.add({
+      name : 'nonlethal',
+      position: Cesium.Cartesian3.fromDegrees(lat + 0.0001200, lon + 0.0000900, 1.0),
+      box : {
+        dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
+        material : Cesium.Color.BLUE.withAlpha(0.5),
+        outline : true,
+	outlineWidth : 8,
+        outlineColor : Cesium.Color.BLACK
+      }
+   });
 
     devices["reception-east"] = viewer.entities.add({
       name : 'reception-east',
