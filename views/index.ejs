@@ -25,21 +25,22 @@
    var data = {};
 
    data.state = {
-     "underground"        : { "color" : "BLACK", "flashing" : false, "alpha" : 0.5 },
-     "reception-west"     : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "nonlethal"          : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "reception-east"     : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "outside-west"       : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "outside-north-west" : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "retractable-door"   : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "outside-north"      : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "outside-north-east" : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "dirtywerx-ramp"     : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "dirtywerx-north"    : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "dirtywerx-south"    : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "thunderdrone-east"  : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "thunderdrone-west"  : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 },
-     "staff-area"         : { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 }
+     "underground"        : { "color" : "BLACK", "outlinecolor" : "WHITE", "flashing" : false, "alpha" : 0.5 },
+     "reception-west"     : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "nonlethal"          : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "drone"              : { "color" : "BLACK", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "reception-east"     : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "outside-west"       : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "outside-north-west" : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "retractable-door"   : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "outside-north"      : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "outside-north-east" : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "dirtywerx-ramp"     : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "dirtywerx-north"    : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "dirtywerx-south"    : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "thunderdrone-east"  : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "thunderdrone-west"  : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 },
+     "staff-area"         : { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 }
    };
 
     var viewer = new Cesium.Viewer('cesiumContainer', {
@@ -110,14 +111,14 @@
 
     // Act1 reset
     /* viewer.screenSpaceEventHandler.setInputAction(function(action) {
-      data.state["outside-west"] = { "color" : "GREEN",   "flashing" : false , "alpha" : 0.5 };
-      data.state["retractable-door"] = { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 };
+      data.state["outside-west"] = { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false , "alpha" : 0.5 };
+      data.state["retractable-door"] = { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 };
     }, Cesium.ScreenSpaceEventType.LEFT_UP);*/
 
     // Act2 trigger
-    viewer.screenSpaceEventHandler.setInputAction(function(action) {
-      data.state["reception-east"] = { "color" : "RED", "flashing" : true, "alpha" : 0.5 };
-      data.state["reception-west"] = { "color" : "RED", "flashing" : true, "alpha" : 0.5 };
+    /*viewer.screenSpaceEventHandler.setInputAction(function(action) {
+      data.state["reception-east"] = { "color" : "RED", "outlinecolor" : "BLACK", "flashing" : true, "alpha" : 0.5 };
+      data.state["reception-west"] = { "color" : "RED", "outlinecolor" : "BLACK", "flashing" : true, "alpha" : 0.5 };
       var entity = new Cesium.Entity('Lobby Weapon Alert');
       entity.name = 'Alert';
       entity.description = {
@@ -127,7 +128,7 @@
       };
       viewer.selectedEntity = entity;
       setTimeout(function(){
-        data.state["nonlethal"] = { "color" : "GREEN", "flashing" : true, "alpha" : 0.5 };
+        data.state["nonlethal"] = { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : true, "alpha" : 0.5 };
         var entity = new Cesium.Entity('Nonlethal Action');
         entity.name = 'Action';
         entity.description = {
@@ -137,12 +138,114 @@
         };
         viewer.selectedEntity = entity;
       }, 2000);
-    }, Cesium.ScreenSpaceEventType.MIDDLE_DOWN);
+    }, Cesium.ScreenSpaceEventType.MIDDLE_DOWN);*/
 
     // Act2 reset
     /* viewer.screenSpaceEventHandler.setInputAction(function(action) {
-      data.state["reception-east"] = { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 };
-      data.state["reception-west"] = { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 };
+      data.state["reception-east"] = { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 };
+      data.state["reception-west"] = { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 };
+      data.state["nonlethal"] = { "color" : "GREEN", "outlinecolor" : "BLACK", "flashing" : false, "alpha" : 0.5 };
+    }, Cesium.ScreenSpaceEventType.MIDDLE_UP); */
+
+    // Act3 trigger
+    viewer.screenSpaceEventHandler.setInputAction(function(action) {
+      $.each(data.state, function( name, value ) {
+        data.state[name].color = "BLACK";
+        data.state[name].outlinecolor = "WHITE";
+      });
+      var entity = new Cesium.Entity('Cameras Disabled');
+      entity.name = 'Alert';
+      entity.description = {
+        getValue : function() {
+          return 'Cameras Disabled';
+        }
+      };
+      viewer.selectedEntity = entity;
+      setTimeout(function(){
+        data.state["underground"].color = "WHITE";
+        data.state["underground"].outlinecolor = "BLACK";
+        var entity = new Cesium.Entity('Security Alarm Disabled');
+        entity.name = 'Alert';
+        entity.description = {
+          getValue : function() {
+            return 'Security Alarm Disabled';
+          }
+        };
+        viewer.selectedEntity = entity;
+        setTimeout(function(){
+          data.state["underground"].color = "RED";
+          data.state["underground"].outlinecolor = "WHITE";
+          data.state["underground"].flashing = true;
+          var entity = new Cesium.Entity('Anamoly Detected');
+          entity.name = 'Alert';
+          entity.description = {
+            getValue : function() {
+              return 'Anamoly Detected';
+            }
+          };
+          viewer.selectedEntity = entity;
+          data.state["nonlethal"].color = "RED";
+          data.state["nonlethal"].outlinecolor = "WHITE";
+          data.state["nonlethal"].flashing = true;
+          setTimeout(function(){
+	    var robotLat = lat + 0.0001300;
+	    var robotLon = lon + 0.0000900;
+            var robotPosition = Cesium.Cartesian3.fromDegrees(robotLat, robotLon, 100.0);
+            var heading = Cesium.Math.toRadians(45.0);
+            var pitch = Cesium.Math.toRadians(-90.0);
+            //viewer.camera.lookAt(robotPosition, new Cesium.HeadingPitchRange(heading, pitch, range));
+            //viewer.camera.flyTo( { destination : robotPosition, maximumHeight: 100, orientation: { heading : heading, pitch : pitch, roll : 0.0 } } );
+            var robotInterval = setInterval(function(){
+	      if(robotLon < lon + 0.000180) {
+	        robotLon = robotLon + 0.000003;
+	        robotLat = robotLat + 0.000002;
+                devices["nonlethal"].position = Cesium.Cartesian3.fromDegrees(robotLat, robotLon, 1.0);
+	      } else {
+	        clearInterval(robotInterval);
+                data.state["drone"].color = "RED";
+                data.state["drone"].outlinecolor = "WHITE";
+                data.state["drone"].flashing = true;
+                setTimeout(function(){
+	          var droneLat = lat + 0.000115;
+	          var droneLon = lon + 0.0002900;
+	          console.log("before droneLon: " + droneLon);
+                  //var dronePosition = Cesium.Cartesian3.fromDegrees(droneLat, droneLon, 100.0);
+                  var heading = Cesium.Math.toRadians(45.0);
+                  var pitch = Cesium.Math.toRadians(-90.0);
+                  //viewer.camera.lookAt(dronePosition, new Cesium.HeadingPitchRange(heading, pitch, range));
+                  //viewer.camera.flyTo( { destination : dronePosition, maximumHeight: 100, orientation: { heading : heading, pitch : pitch, roll : 0.0 } } );
+                  var height = 8.0;
+                  var droneInterval = setInterval(function(){
+	            if(droneLon < lon + 0.0003100) {
+	              console.log("moving droneLon out: " + droneLon + " droneLat: " + droneLat + " height: " + height);
+	              droneLon = droneLon + 0.0000010;
+                      devices["drone"].position = Cesium.Cartesian3.fromDegrees(droneLat, droneLon, height);
+	            } else {
+	              console.log("stopping drone fly out droneLon: " + droneLon + " droneLat: " + droneLat + " height: " + height);
+                      clearInterval(droneInterval);
+                      var downDroneInterval = setInterval(function(){
+	                if(height > 5.0) {
+	                  height = height - 0.20;
+                          devices["drone"].position = Cesium.Cartesian3.fromDegrees(droneLat, droneLon, height);
+		        } else {
+	                  console.log("stopping drone fly down droneLon: " + droneLon + " droneLat: " + droneLat + " height: " + height);
+                          clearInterval(downDroneInterval);
+		        }
+                      }, 75);
+                    }
+	          }, 75);
+                }, 1000);
+	      }
+	    }, 75);
+          }, 2000);
+        }, 2000);
+      }, 2000);
+    }, Cesium.ScreenSpaceEventType.MIDDLE_DOWN);
+
+    // Act3 reset
+    /* viewer.screenSpaceEventHandler.setInputAction(function(action) {
+      data.state["reception-east"] = { "color" : "GREEN", "outlinecolor": "BLACK", "flashing" : false, "alpha" : 0.5 };
+      data.state["reception-west"] = { "color" : "GREEN", "outlinecolor": "BLACK", "flashing" : false, "alpha" : 0.5 };
       data.state["nonlethal"] = { "color" : "GREEN", "flashing" : false, "alpha" : 0.5 };
     }, Cesium.ScreenSpaceEventType.MIDDLE_UP); */
 
@@ -191,22 +294,22 @@
         dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
         material : Cesium.Color.BLUE.withAlpha(0.5),
         outline : true,
-	outlineWidth : 8,
+	outlineWidth : 2,
         outlineColor : Cesium.Color.BLACK
       }
     })
 
     devices["nonlethal"] = viewer.entities.add({
       name : 'nonlethal',
-      position: Cesium.Cartesian3.fromDegrees(lat + 0.0001200, lon + 0.0000900, 1.0),
+      position: Cesium.Cartesian3.fromDegrees(lat + 0.0001300, lon + 0.0000900, 1.0),
       box : {
         dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
         material : Cesium.Color.BLUE.withAlpha(0.5),
         outline : true,
-	outlineWidth : 8,
+	outlineWidth : 2,
         outlineColor : Cesium.Color.BLACK
       }
-   });
+    });
 
     devices["reception-east"] = viewer.entities.add({
       name : 'reception-east',
@@ -215,7 +318,7 @@
         dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
         material : Cesium.Color.BLUE.withAlpha(0.5),
         outline : true,
-	outlineWidth : 8,
+	outlineWidth : 2,
         outlineColor : Cesium.Color.BLACK
       }
    });
@@ -227,7 +330,7 @@
        dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
        material : Cesium.Color.BLUE.withAlpha(0.5),
        outline : true,
-       outlineWidth : 8,
+       outlineWidth : 2,
        outlineColor : Cesium.Color.BLACK
      }
    });
@@ -239,7 +342,7 @@
        dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
        material : Cesium.Color.BLUE.withAlpha(0.5),
        outline : true,
-       outlineWidth : 8,
+       outlineWidth : 2,
        outlineColor : Cesium.Color.BLACK
      }
    });
@@ -251,7 +354,19 @@
        dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
        material : Cesium.Color.BLUE.withAlpha(0.5),
        outline : true,
-       outlineWidth : 8,
+       outlineWidth : 2,
+       outlineColor : Cesium.Color.BLACK
+     }
+   });
+
+   devices["drone"] = viewer.entities.add({
+     name : 'drone',
+     position: Cesium.Cartesian3.fromDegrees(lat + 0.000115, lon + 0.0002900, 7.0),
+     box : {
+       dimensions : new Cesium.Cartesian3(0.75, 0.75, 0.75),
+       material : Cesium.Color.BLUE.withAlpha(0.5),
+       outline : true,
+       outlineWidth : 2,
        outlineColor : Cesium.Color.BLACK
      }
    });
@@ -263,7 +378,7 @@
        dimensions : new Cesium.Cartesian3(12.25, 1.25, 6.25),
        material : Cesium.Color.BLUE.withAlpha(0.5),
        outline : true,
-       outlineWidth : 8,
+       outlineWidth : 2,
        outlineColor : Cesium.Color.BLACK
      }
    });
@@ -275,7 +390,7 @@
        dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
        material : Cesium.Color.BLUE.withAlpha(0.5),
        outline : true,
-       outlineWidth : 8,
+       outlineWidth : 2,
        outlineColor : Cesium.Color.BLACK
      }
    });
@@ -287,7 +402,7 @@
        dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
        material : Cesium.Color.BLUE.withAlpha(0.5),
        outline : true,
-       outlineWidth : 8,
+       outlineWidth : 2,
        outlineColor : Cesium.Color.BLACK
      }
    });
@@ -299,7 +414,7 @@
        dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
        material : Cesium.Color.BLUE.withAlpha(0.5),
        outline : true,
-       outlineWidth : 8,
+       outlineWidth : 2,
        outlineColor : Cesium.Color.BLACK
      }
    });
@@ -311,7 +426,7 @@
        dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
        material : Cesium.Color.BLUE.withAlpha(0.5),
        outline : true,
-       outlineWidth : 8,
+       outlineWidth : 2,
        outlineColor : Cesium.Color.BLACK
      }
    });
@@ -323,7 +438,7 @@
        dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
        material : Cesium.Color.BLUE.withAlpha(0.5),
        outline : true,
-       outlineWidth : 8,
+       outlineWidth : 2,
        outlineColor : Cesium.Color.BLACK
      }
    });
@@ -335,7 +450,7 @@
        dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
        material : Cesium.Color.BLUE.withAlpha(0.5),
        outline : true,
-       outlineWidth : 8,
+       outlineWidth : 2,
        outlineColor : Cesium.Color.BLACK
      }
    });
@@ -347,7 +462,7 @@
        dimensions : new Cesium.Cartesian3(1.25, 1.25, 1.25),
        material : Cesium.Color.BLUE.withAlpha(0.5),
        outline : true,
-       outlineWidth : 8,
+       outlineWidth : 2,
        outlineColor : Cesium.Color.BLACK
      }
    });
@@ -361,6 +476,7 @@
        $.each(data.state, function( name, value ) {
          config = data.state[name]
          colorname = config["color"]
+         outlinecolorname = config["outlinecolor"]
          flashing = config["flashing"]
          if(flashing) {
            if(config["alpha"] == 0.5) {
@@ -375,15 +491,18 @@
          device = devices[name]
          if(device) {
            var color = Cesium.Color[colorname].withAlpha(alpha)
+           var outlinecolor = Cesium.Color[outlinecolorname].withAlpha(alpha)
            if(device.box) {
              device.box.material = color;
-             console.log("Coloring the model " + name);
+             device.box.outlineColor = outlinecolor;
+             //console.log("Coloring the model " + name + " color " + colorname + " outlinecolor " + outlinecolorname);
            } else {
              if(device.color) {
                device.color = color
-               console.log("Coloring the device " + name);
-             } else {
-               console.log(`Cannot find device.box or device.color for ${name}`)
+               device.outlineColor = outlinecolor
+               //console.log("Coloring the device " + name + " color " + colorname + " outlinecolor " + outlinecolorname);
+             //} else {
+               //console.log(`Cannot find device.box or device.color for ${name}`)
              }
            }
          } else {
